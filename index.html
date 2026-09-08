@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Panorama Viewer</title>
+    <style>
+      html,body,#app{height:100%;margin:0}
+      #app{display:flex;flex-direction:column}
+      #canvas-container{flex:1;position:relative;background:#000}
+      #ui{position:absolute;left:12px;top:12px;z-index:10;display:flex;gap:8px}
+      button{padding:8px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.06);color:#fff}
+      .note{position:absolute;right:12px;top:12px;color:#ccc;font-size:13px}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="canvas-container">
+        <div id="ui">
+          <button id="toggle-vr">Enter VR</button>
+          <button id="reset-view">Reset View</button>
+        </div>
+        <div class="note">Tip: drag to look around. For immersive VR use a WebXR-capable browser and HTTPS.</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
